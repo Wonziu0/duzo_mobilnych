@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/todayPhoto"
+        android:layout_width="230dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/todayTitle"
+        android:layout_width="314dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayPhoto" />
+
+    <TextView
+        android:id="@+id/todayDesc"
+        android:layout_width="314dp"
+        android:layout_height="341dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayTitle" />
+
+    <Button
+        android:id="@+id/todayDownload"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="28dp"
+        android:text="Pobierz zdjęcie dnia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pickDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="28dp"
+        android:text="Wybierz datę zdjęcia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/todayDownload" />
+
+    <TextView
+        android:id="@+id/timePass"
+        android:layout_width="179dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
